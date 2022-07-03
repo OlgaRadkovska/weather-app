@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&family=Poppins:wght@400;700&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/d457c62ac1.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Wearher</title>
+  </head>
+  <body>
+    <h1><i class="fa-solid fa-location-dot"></i> <span id="city"></span></h1>
+    <form class="search" id="change-city">
+      <input
+        class="city"
+        type="text"
+        placeholder="🔎Change the city"
+        autocomplete="off"
+        id="city-input"
+      />
+      <button type="button" id="currentLocation-btn">Current Location</button>
+    </form>
+
+    <div class="container">
+      <div
+        class="card text-bg-secondary mb-3 main-card"
+        style="max-width: 42rem"
+      >
+        <div class="card-header">Sat 04 June 12:30</div>
+        <div class="card-body">
+          <h5 class="card-title main-card-title-font-size">
+            <i class="fa-solid fa-sun main-card-pic"></i>
+            <span id="default-temp"></span>
+            <span class="units">
+              <a href="#" id="celsius-swither">°C</a>
+              |
+              <a href="#" id="fahrenheit-swither">°F</a>
+            </span>
+            <span id="weather-description"></span>
+          </h5>
+          <p class="card-text main-card-text-font-size">
+            Air Humidity <span id="humidity"></span>%
+          </p>
+        </div>
+      </div>
+      <ul class="week">
+        <li class="Sun">
+          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
+            <div class="card-header">
+              Sun <br />
+              05 June
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fa-solid fa-cloud-sun list-item-card-pic"></i>
+              </h5>
+              <p class="card-text">23&deg;C</p>
+            </div>
+          </div>
+        </li>
+        <li class="Mon">
+          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
+            <div class="card-header">
+              Mon <br />
+              06 June
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fa-solid fa-cloud-bolt list-item-card-pic"></i>
+              </h5>
+              <p class="card-text">17&deg;C</p>
+            </div>
+          </div>
+        </li>
+        <li class="Tue">
+          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
+            <div class="card-header">
+              Tue <br />
+              07 June
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fa-solid fa-cloud-rain list-item-card-pic"></i>
+              </h5>
+              <p class="card-text">18&deg;C</p>
+            </div>
+          </div>
+        </li>
+        <li class="Wed">
+          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
+            <div class="card-header">
+              Wed <br />
+              08 June
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <i
+                  class="fa-solid fa-cloud-showers-water list-item-card-pic"
+                ></i>
+              </h5>
+              <p class="card-text">19&deg;C</p>
+            </div>
+          </div>
+        </li>
+        <li class="Thu">
+          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
+            <div class="card-header">
+              Thu <br />
+              09 June
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fa-solid fa-cloud-sun-rain list-item-card-pic"></i>
+              </h5>
+              <p class="card-text">20&deg;C</p>
+            </div>
+          </div>
+        </li>
+        <li class="Fri">
+          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
+            <div class="card-header">
+              Fri <br />
+              10 June
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fa-solid fa-rainbow list-item-card-pic"></i>
+              </h5>
+              <p class="card-text">23&deg;C</p>
+            </div>
+          </div>
+        </li>
+        <li class="Sat">
+          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
+            <div class="card-header">
+              Sat <br />
+              11 June
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <i class="fa-solid fa-sun list-item-card-pic"></i>
+              </h5>
+              <p class="card-text">26&deg;C</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

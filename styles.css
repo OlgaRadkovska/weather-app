@@ -1,0 +1,68 @@
+body {
+  font-family: Poppins;
+}
+h1 {
+  padding: 30px;
+  text-align: center;
+  color: rgba(62, 53, 129, 0.792);
+  font-weight: 700;
+}
+form {
+  text-align: center;
+}
+input {
+  padding: 8px 5px;
+  /* border-color: rgba(22, 5, 151, 0.792); */
+  border-color: rgba(62, 53, 129, 0.792);
+  border-radius: 5px;
+}
+button {
+  margin-top: 15px;
+  padding: 8px 5px;
+  color: white;
+  border-color: rgba(62, 53, 129, 0.792);
+  background-color: rgba(46, 34, 130, 0.792);
+  border-radius: 5px;
+}
+button:hover {
+  background-color: rgba(76, 59, 185, 0.792);
+  border-color: rgba(76, 59, 185, 0.792);
+}
+.city {
+  text-align: center;
+}
+.container {
+  max-width: fit-content;
+  margin-top: 50px;
+}
+.card-header {
+  background-color: rgba(46, 34, 130, 0.792);
+  /* background-color: rgba(22, 5, 151, 0.792); */
+  color: white;
+}
+.main-card {
+  margin: 0 auto;
+  font-size: 38px;
+  background-color: rgba(244, 243, 243, 0.792);
+}
+.main-card-title-font-size {
+  font-size: 28px;
+}
+.main-card-text-font-size {
+  font-size: 20px;
+}
+.main-card-pic {
+  color: rgb(215, 180, 7);
+}
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+}
+.list-item-card-pic {
+  color: rgba(62, 53, 129, 0.792);
+}
