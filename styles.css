@@ -66,3 +66,7 @@ li {
 .list-item-card-pic {
   color: rgba(62, 53, 129, 0.792);
 }
+.author {
+  text-align: center;
+  margin-bottom: 30px;
+}
