@@ -35,9 +35,10 @@ let form = document.querySelector("#change-city");
 let currentCity = document.querySelector("h1").innerText;
 form.addEventListener("submit", queryCity);
 let defaulTemp = document.querySelector("#default-temp");
-let defaulTempValue = Number(defaulTemp.innerHTML);
+let defaulTempValue = defaulTemp.innerHTML;
 let celciumTemp = document.querySelector("#celsius-swither");
 let fahrenheitTemp = document.querySelector("#fahrenheit-swither");
+fahrenheitTemp.addEventListener("click", calcFahrenheit);
 let iconElement = document.querySelector("#icon");
 function displayCurrentWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -45,6 +46,9 @@ function displayCurrentWeather(response) {
     response.data.main.temp
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind-speed").innerHTML = Math.round(
+    response.data.wind.speed
+  );
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
   iconElement.setAttribute(
@@ -78,9 +82,10 @@ function showCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function calcFahrenheit() {
+function calcFahrenheit(event) {
+  event.preventDefault();
   let unitFahrenheit = defaulTempValue * 1.8 + 32;
-  defaulTemp.innerHTML = `${unitFahrenheit}`;
+  temperatureElement.innerHTML = Math.round(unitFahrenheit);
 }
 
 function calcCelsium() {
