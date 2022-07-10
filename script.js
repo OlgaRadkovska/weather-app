@@ -38,7 +38,7 @@ let defaulTemp = document.querySelector("#default-temp");
 let defaulTempValue = Number(defaulTemp.innerHTML);
 let celciumTemp = document.querySelector("#celsius-swither");
 let fahrenheitTemp = document.querySelector("#fahrenheit-swither");
-
+let iconElement = document.querySelector("#icon");
 function displayCurrentWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#default-temp").innerHTML = Math.round(
@@ -47,6 +47,11 @@ function displayCurrentWeather(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].main;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 
 function search(city) {
