@@ -34,17 +34,16 @@ dateContainer.innerHTML = `${day} ${date} ${month} ${hours}:${minutes}`;
 let form = document.querySelector("#change-city");
 let currentCity = document.querySelector("h1").innerText;
 form.addEventListener("submit", queryCity);
-let defaulTemp = document.querySelector("#default-temp");
-let defaulTempValue = defaulTemp.innerHTML;
-let celciumTemp = document.querySelector("#celsius-swither");
-let fahrenheitTemp = document.querySelector("#fahrenheit-swither");
-fahrenheitTemp.addEventListener("click", calcFahrenheit);
 let iconElement = document.querySelector("#icon");
+
 function displayCurrentWeather(response) {
+  let temperatureElement = document.querySelector("#default-temp");
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#default-temp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  celciusTemp = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celciusTemp);
+  // document.querySelector("#default-temp").innerHTML = Math.round(
+  //   response.data.main.temp
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
@@ -82,21 +81,34 @@ function showCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function calcFahrenheit(event) {
+function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let unitFahrenheit = defaulTempValue * 1.8 + 32;
-  temperatureElement.innerHTML = Math.round(unitFahrenheit);
+  let temperatureElement = document.querySelector("#default-temp");
+  //remove the active class from the celcius-link
+  celsiuslink.classList.remove("active");
+  fahrenheitlink.classList.add("active");
+  let fahrenheitTemperature = (celciusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-function calcCelsium() {
-  defaulTemp.innerHTML = defaulTempValue;
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#default-temp");
+  //remove the active class from the fahrenheit-link
+  celsiuslink.classList.add("active");
+  fahrenheitlink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celciusTemp);
 }
 
-fahrenheitTemp.addEventListener("click", calcFahrenheit);
-
-celciumTemp.addEventListener("click", calcCelsium);
+let celciusTemp = null;
 
 let currenLocationBtn = document.querySelector("#currentLocation-btn");
 currenLocationBtn.addEventListener("click", showCurrentLocation);
+
+let fahrenheitlink = document.querySelector("#fahrenheit-link");
+fahrenheitlink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiuslink = document.querySelector("#celsius-link");
+celsiuslink.addEventListener("click", displayCelsiusTemperature);
 
 search("Kyiv");

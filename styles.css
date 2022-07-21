@@ -66,6 +66,16 @@ li {
 .card-body {
   background-color: rgba(209, 208, 210, 0.792);
 }
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
+
 .list-item-card-pic {
   color: rgba(62, 53, 129, 0.792);
 }
