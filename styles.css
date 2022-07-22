@@ -60,11 +60,23 @@ ul {
 li {
   list-style: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 10px;
+  font-weight: 600;
   text-align: center;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  font-weight: 400;
 }
 .card-body {
   background-color: rgba(209, 208, 210, 0.792);
+  padding-top: 1px;
+  padding-bottom: 3px;
 }
 
 .active {

@@ -112,3 +112,20 @@ let celsiuslink = document.querySelector("#celsius-link");
 celsiuslink.addEventListener("click", displayCelsiusTemperature);
 
 search("Kyiv");
+
+// let fahrenheitSwitcher = document.querySelector("#fahrenheit-swither");
+// fahrenheitSwitcher.addEventListener("click", calcFahrenheit);
+
+// function calcFahrenheit(event) {
+//   event.preventDefault();
+//   let fahrenheitTemp = defaulTempValue * 1.8 + 32;
+//   defaulTemp.innerHTML = fahrenheitTemp;
+// }
+
+// function calcCelsium() {
+//   defaulTemp.innerHTML = defaulTempValue;
+// }
+
+// // fahrenheitTemp.addEventListener("click", calcFahrenheit);
+
+// celciumTemp.addEventListener("click", calcCelsium);
