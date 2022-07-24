@@ -23,7 +23,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>Wearher</title>
+    <title>Weather</title>
   </head>
   <body>
     <h1><i class="fa-solid fa-location-dot"></i> <span id="city"></span></h1>
@@ -39,10 +39,7 @@
     </form>
 
     <div class="container">
-      <div
-        class="card text-bg-secondary mb-3 main-card"
-        style="max-width: 42rem"
-      >
+      <div class="card text-bg-secondary mb-3 main-card">
         <div class="card-header">Sat 04 June 12:30</div>
         <div class="card-body">
           <h5 class="card-title main-card-title-font-size">
@@ -63,161 +60,34 @@
             Air Humidity <span id="humidity"></span>%
           </p>
           <p class="card-text main-card-text-font-size">
-            Wind Speed <span id="wind-speed"></span> km/h
+            <span class="wind-speed"
+              >Wind Speed <span id="wind-speed"></span> km/h
+            </span>
           </p>
         </div>
       </div>
-      <ul class="week weather-forecast">
-        <li class="Sun">
-          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
-            <div class="card-header weather-forecast-date">Sun</div>
-            <div class="card-body">
-              <h5 class="card-title">
-                <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  width="50px"
-                  alt="sunny"
-                  id="icon-01"
-                />
-              </h5>
-              <p class="card-text weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">23&deg;C</span>
-                <span class="weather-forecast-temperature-min"> 17&deg;C</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="Mon">
-          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
-            <div class="card-header weather-forecast-date">Mon</div>
-            <div class="card-body">
-              <h5 class="card-title">
-                <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  width="50px"
-                  alt="sunny"
-                  id="icon-02"
-                />
-              </h5>
-              <p class="card-text weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">23&deg;C</span>
-                <span class="weather-forecast-temperature-min"> 17&deg;C</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="Tue">
-          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
-            <div class="card-header weather-forecast-date">Tue</div>
-            <div class="card-body">
-              <h5 class="card-title">
-                <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  width="50px"
-                  alt="sunny"
-                  id="icon-03"
-                />
-              </h5>
-              <p class="card-text weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">23&deg;C</span>
-                <span class="weather-forecast-temperature-min"> 17&deg;C</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="Wed">
-          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
-            <div class="card-header weather-forecast-date">Wed</div>
-            <div class="card-body">
-              <h5 class="card-title">
-                <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  width="50px"
-                  alt="sunny"
-                  id="icon-04"
-                />
-              </h5>
-              <p class="card-text weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">23&deg;C</span>
-                <span class="weather-forecast-temperature-min"> 17&deg;C</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="Thu">
-          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
-            <div class="card-header weather-forecast-date">Thu</div>
-            <div class="card-body">
-              <h5 class="card-title">
-                <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  width="50px"
-                  alt="sunny"
-                  id="icon-05"
-                />
-              </h5>
-              <p class="card-text weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">23&deg;C</span>
-                <span class="weather-forecast-temperature-min"> 17&deg;C</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="Fri">
-          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
-            <div class="card-header weather-forecast-date">Fri</div>
-            <div class="card-body">
-              <h5 class="card-title">
-                <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  width="50px"
-                  alt="sunny"
-                  id="icon-06"
-                />
-              </h5>
-              <p class="card-text weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">23&deg;C</span>
-                <span class="weather-forecast-temperature-min"> 17&deg;C</span>
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="Sat">
-          <div class="card text-bg-secondary mb-3" style="max-width: 6rem">
-            <div class="card-header weather-forecast-date">Sat</div>
-            <div class="card-body">
-              <h5 class="card-title">
-                <img
-                  src="http://openweathermap.org/img/wn/10d@2x.png"
-                  width="50px"
-                  alt="sunny"
-                  id="icon-07"
-                />
-              </h5>
-              <p class="card-text weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">23&deg;C</span>
-                <span class="weather-forecast-temperature-min"> 17&deg;C</span>
-              </p>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="author">
-      <a
-        href="https://github.com/OlgaRadkovska/weather-app"
-        target="_blank"
-        rel="norefferer noopener"
-        ><img
-          src="./img/github-seeklogo.com.svg"
-          alt="github logo"
-          width="25"
-        />
-        Open-source code</a
-      >
-      by Olga Radkovska
-    </div>
 
-    <script src="./script.js"></script>
+      <div
+        class="card text-bg-secondary mb-3 weather-forecast"
+        id="forecast"
+      ></div>
+
+      <div class="author">
+        <a
+          href="https://github.com/OlgaRadkovska/weather-app"
+          target="_blank"
+          rel="norefferer noopener"
+          ><img
+            src="./img/github-seeklogo.com.svg"
+            alt="github logo"
+            width="25"
+          />
+          Open-source code</a
+        >
+        by Olga Radkovska
+      </div>
+
+      <script src="./script.js"></script>
+    </div>
   </body>
 </html>
